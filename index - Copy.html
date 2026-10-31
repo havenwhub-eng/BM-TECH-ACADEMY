@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123f78">
+    <meta name="description" content="Sign in to the BM TECH Academy student portal.">
+    <title>BM TECH Academy | Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="login-card" aria-labelledby="page-title">
+            <header class="card-header">
+                <h1 id="page-title">BM TECH</h1>
+                <p>Student Portal</p>
+            </header>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="regNumber">Reg. Number</label>
+                    <input
+                        type="text"
+                        id="regNumber"
+                        name="regNumber"
+                        placeholder="Your registration number"
+                        autocomplete="username"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            <svg id="eyeIcon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <svg id="eyeOffIcon" viewBox="0 0 24 24" aria-hidden="true" hidden>
+                                <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8"></path>
+                                <path d="M9.9 5.2A10.7 10.7 0 0 1 12 5c6.4 0 10 7 10 7a15.7 15.7 0 0 1-3 3.8M6.2 6.2C3.5 8.1 2 12 2 12s3.6 7 10 7c1.3 0 2.5-.3 3.5-.7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-option" for="rememberMe">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span>Remember my number</span>
+                    </label>
+                    <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Log In</button>
+                <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; <span id="currentYear"></span> BM TECH Systems</p>
+        </footer>
+    </main>
+</body>
+</html>

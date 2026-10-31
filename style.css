@@ -1,0 +1,251 @@
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #17365d;
+    background: #edf4fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(145deg, #eaf3fc, #f7faff 55%, #e8f2fb);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 18px 18px;
+}
+
+.login-card {
+    width: min(100%, 400px);
+    padding: 34px 36px 30px;
+    border: 1px solid #e1eaf3;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 18px 48px rgba(27, 62, 100, 0.13);
+}
+
+.card-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.card-header h1 {
+    margin: 0;
+    color: #1263a2;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    color: #718198;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 19px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #284565;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.input-group input {
+    width: 100%;
+    min-height: 49px;
+    padding: 0 14px;
+    border: 1px solid #d5e0eb;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #17365d;
+    font-size: 14px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.input-group input::placeholder {
+    color: #98a7b8;
+}
+
+.input-group input:focus {
+    border-color: #2782bd;
+    box-shadow: 0 0 0 3px rgba(39, 130, 189, 0.15);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 52px;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #176eaa;
+    cursor: pointer;
+}
+
+#togglePassword:hover {
+    background: #eef6fc;
+}
+
+#togglePassword svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+#togglePassword svg[hidden] {
+    display: none;
+}
+
+.form-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 2px 0 22px;
+    font-size: 12px;
+}
+
+.remember-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #5b6d82;
+    cursor: pointer;
+}
+
+.remember-option input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: #176eaa;
+}
+
+.form-options a {
+    color: #176eaa;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    min-height: 49px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(110deg, #1263a2, #1683c3);
+    box-shadow: 0 7px 16px rgba(18, 99, 162, 0.2);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 160ms ease, transform 160ms ease;
+}
+
+.login-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.form-message {
+    min-height: 19px;
+    margin: 13px 0 0;
+    color: #385b7c;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.form-message--error {
+    color: #b42318;
+}
+
+.support-note {
+    margin: 17px 0 0;
+    padding-top: 17px;
+    border-top: 1px solid #eaf0f5;
+    color: #7a8a9d;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 23px;
+    color: #718198;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(23, 110, 170, 0.45);
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 20px 14px 14px;
+    }
+
+    .login-card {
+        padding: 30px 22px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
